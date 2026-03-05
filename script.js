@@ -136,10 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
 
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const btn = contactForm.querySelector('button[type="submit"]');
-    const originalHtml = btn.innerHTML;
+    // Desativando temporariamente para forçar a ativação no GitHub Pages
+    // e.preventDefault(); 
+    return;
 
     // Change button state to loading
     btn.innerHTML = '<i class="ph ph-spinner-gap animate-spin"></i> Enviando...';
