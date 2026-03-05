@@ -135,22 +135,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Contact Form (basic handler) ----
   const contactForm = document.getElementById('contactForm');
 
-  /*
   contactForm.addEventListener('submit', (e) => {
-    // Desativando temporariamente para forçar a ativação no GitHub Pages
-    // e.preventDefault(); 
-    return;
-  
+    e.preventDefault();
+
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const originalHtml = btn.innerHTML;
+
     // Change button state to loading
     btn.innerHTML = '<i class="ph ph-spinner-gap animate-spin"></i> Enviando...';
     btn.disabled = true;
-  
+
     // FormSubmit strictly prohibits submissions from the 'file://' protocol
     if (window.location.protocol === 'file:') {
       btn.innerHTML = originalHtml;
       btn.style.background = '';
       btn.disabled = false;
-  
+
       alert(
         "Teste Local Detectado!\n\n" +
         "O FormSubmit não permite o envio de mensagens a partir de arquivos abertos diretamente no navegador (file://).\n\n" +
@@ -159,12 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       return;
     }
-  
+
     // Use FormData to get all form values including hidden inputs
     const formData = new FormData(contactForm);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-  
+
     fetch(contactForm.action, {
       method: "POST",
       headers: {
@@ -205,43 +205,43 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     */
 
-  // -- Rest of code --
+    // -- Rest of code --
 
 
-  // ---- Stat Counter Animation ----
-  const statNumbers = document.querySelectorAll('.stat-number');
+    // ---- Stat Counter Animation ----
+    const statNumbers = document.querySelectorAll('.stat-number');
 
-  const animateCounter = (el) => {
-    const target = parseInt(el.textContent);
-    const suffix = el.textContent.replace(/[0-9]/g, '');
-    let current = 0;
-    const increment = Math.ceil(target / 40);
-    const duration = 1500;
-    const stepTime = duration / (target / increment);
+    const animateCounter = (el) => {
+      const target = parseInt(el.textContent);
+      const suffix = el.textContent.replace(/[0-9]/g, '');
+      let current = 0;
+      const increment = Math.ceil(target / 40);
+      const duration = 1500;
+      const stepTime = duration / (target / increment);
 
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
-      el.textContent = current + suffix;
-    }, stepTime);
-  };
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = current + suffix;
+      }, stepTime);
+    };
 
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const statItems = entry.target.querySelectorAll('.stat-number');
-        statItems.forEach(stat => animateCounter(stat));
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statItems = entry.target.querySelectorAll('.stat-number');
+          statItems.forEach(stat => animateCounter(stat));
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
 
-  const statsContainer = document.querySelector('.hero-stats');
-  if (statsContainer) {
-    statsObserver.observe(statsContainer);
-  }
+    const statsContainer = document.querySelector('.hero-stats');
+    if (statsContainer) {
+      statsObserver.observe(statsContainer);
+    }
 
-});
+  });
