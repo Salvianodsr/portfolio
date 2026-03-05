@@ -204,43 +204,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
       });
     */
-});
+
+  // -- Rest of code --
 
 
-// ---- Stat Counter Animation ----
-const statNumbers = document.querySelectorAll('.stat-number');
+  // ---- Stat Counter Animation ----
+  const statNumbers = document.querySelectorAll('.stat-number');
 
-const animateCounter = (el) => {
-  const target = parseInt(el.textContent);
-  const suffix = el.textContent.replace(/[0-9]/g, '');
-  let current = 0;
-  const increment = Math.ceil(target / 40);
-  const duration = 1500;
-  const stepTime = duration / (target / increment);
+  const animateCounter = (el) => {
+    const target = parseInt(el.textContent);
+    const suffix = el.textContent.replace(/[0-9]/g, '');
+    let current = 0;
+    const increment = Math.ceil(target / 40);
+    const duration = 1500;
+    const stepTime = duration / (target / increment);
 
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      current = target;
-      clearInterval(timer);
-    }
-    el.textContent = current + suffix;
-  }, stepTime);
-};
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = current + suffix;
+    }, stepTime);
+  };
 
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const statItems = entry.target.querySelectorAll('.stat-number');
-      statItems.forEach(stat => animateCounter(stat));
-      statsObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statItems = entry.target.querySelectorAll('.stat-number');
+        statItems.forEach(stat => animateCounter(stat));
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
 
-const statsContainer = document.querySelector('.hero-stats');
-if (statsContainer) {
-  statsObserver.observe(statsContainer);
-}
+  const statsContainer = document.querySelector('.hero-stats');
+  if (statsContainer) {
+    statsObserver.observe(statsContainer);
+  }
 
 });
