@@ -170,6 +170,24 @@ ul {
 }
 
 /* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.text-accent-teal {
+  color: #14aab3 !important;
+}
+
+/* ============================================
    NAVBAR
    ============================================ */
 .navbar {
@@ -235,36 +253,7 @@ ul {
   font-size: 0.85rem;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 1001;
-}
 
-.hamburger span {
-  width: 24px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: 4px;
-  transition: all var(--transition);
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
 
 /* ============================================
    HERO
@@ -290,10 +279,6 @@ ul {
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -464,22 +449,6 @@ ul {
   position: relative;
 }
 
-.about::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
-}
-
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
 
 .about-image-wrapper {
   position: relative;
@@ -542,16 +511,6 @@ ul {
 /* ============================================
    SPECIALTIES
    ============================================ */
-.specialties {
-  padding: 120px 0;
-  position: relative;
-}
-
-.specialties-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
 
 .specialty-card {
   background: var(--bg-card);
@@ -656,51 +615,6 @@ ul {
   position: relative;
 }
 
-.tools::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
-}
-
-.tools-categories {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
-.tool-category {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 36px;
-}
-
-.tool-category-title {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 28px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.tool-category-title i {
-  font-size: 1.3rem;
-}
-
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 20px;
-}
 
 .tool-item {
   display: flex;
@@ -725,6 +639,7 @@ ul {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .tool-item span {
@@ -783,11 +698,6 @@ ul {
   border-color: var(--accent);
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
 
 .portfolio-card {
   border-radius: var(--radius-md);
@@ -934,7 +844,7 @@ ul {
 }
 
 .client-logo {
-  padding: 20px 40px;
+  padding: 5px 10px;
   border-radius: var(--radius-md);
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -960,11 +870,6 @@ ul {
   position: relative;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
 
 .testimonial-card {
   background: var(--bg-card);
@@ -1046,12 +951,7 @@ ul {
   background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
 }
 
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
+
 
 .contact-desc {
   font-size: 1.05rem;
@@ -1265,12 +1165,6 @@ ul {
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 48px;
-  }
-
   .hero-content {
     order: 1;
   }
@@ -1297,40 +1191,12 @@ ul {
     height: 360px;
   }
 
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 48px;
-    text-align: center;
-  }
-
   .about-image-wrapper img {
     height: 400px;
   }
 
   .about-contact-info {
     align-items: center;
-  }
-
-  .specialties-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 48px;
-    text-align: center;
   }
 
   .contact-details {
@@ -1415,10 +1281,6 @@ ul {
     font-size: clamp(1.8rem, 6vw, 2.5rem);
   }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
   .portfolio-filters {
     gap: 8px;
   }
@@ -1439,11 +1301,6 @@ ul {
 
   .contact-form {
     padding: 28px 24px;
-  }
-
-  .tools-grid {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 12px;
   }
 
   .tool-item {

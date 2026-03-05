@@ -64,27 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', activateNavLink, { passive: true });
 
 
-  // ---- Mobile Menu ----
-  const hamburger = document.getElementById('hamburger');
-  const navLinksContainer = document.getElementById('navLinks');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinksContainer.classList.toggle('active');
-    document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
-  });
-
-  // Close mobile menu on link click
-  navLinksContainer.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinksContainer.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
 
 
-  // ---- Smooth Scroll for Anchor Links ----
+
+  // ---- Smooth Scroll for Anchor Links & Auto-Close Mobile Menu ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
@@ -94,6 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
+
+        // Close Bootstrap navbar if open on mobile
+        const navbarCollapse = document.getElementById('navbarNav');
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) {
+            bsCollapse.hide();
+          }
+        }
       }
     });
   });

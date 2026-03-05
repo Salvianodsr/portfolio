@@ -18,30 +18,39 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- ===================== NAVBAR ===================== -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="nav-logo">
+      <a class="navbar-brand nav-logo" href="#">
         <span class="logo-accent">&lt;</span>Portfolio<span class="logo-accent">/&gt;</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active">Início</a></li>
-        <li><a href="#about" class="nav-link">Sobre</a></li>
-        <li><a href="#specialties" class="nav-link">Especialidades</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
-        <li><a href="#contact" class="nav-link">Contato</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary nav-cta">Fale Comigo</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+
+      <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-links align-items-center" id="navLinks">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Início</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="#specialties" class="nav-link">Especialidades</a></li>
+          <li class="nav-item"><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><a href="#contact" class="btn btn-primary nav-cta">Fale Comigo</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -49,46 +58,51 @@
   <section class="hero" id="hero">
     <div class="hero-bg-glow"></div>
     <div class="container hero-container">
-      <div class="hero-content reveal">
-        <p class="hero-tag">CRIATIVO · ESTRATÉGICO · INOVADOR</p>
-        <h1 class="hero-title">
-          <span class="line">[SALVIANO</span>
-          <span class="line">ALVES<span class="accent">]</span></span>
-        </h1>
-        <p class="hero-subtitle-role">· Designer Gráfico · Desenvolvedor Front-End <br>· Gestor de Tráfego Pago</p>
-        <p class="hero-subtitle">Transformo ideias em experiências visuais e resultados reais.</p>
-        <div class="hero-btns">
-          <a href="#portfolio" class="btn btn-primary">
-            <i class="ph ph-folder-open"></i> Ver Portfólio
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            <i class="ph ph-chat-circle-dots"></i> Fale Comigo
-          </a>
-        </div>
-        <div class="hero-socials">
-          <a href="#" target="_blank" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-          <a href="#" target="_blank" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-          <a href="#" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
-        </div>
-      </div>
-      <div class="hero-image reveal reveal-delay-1">
-        <div class="hero-image-frame">
-          <img src="assets/img/salviano-hero.jpg" alt="Foto profissional" loading="eager">
-          <div class="hero-image-ring"></div>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Projetos</span>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 hero-content reveal">
+          <p class="hero-tag">CRIATIVO · ESTRATÉGICO · INOVADOR</p>
+          <h1 class="hero-title">
+            <span class="line">[SALVIANO</span>
+            <span class="line">ALVES<span class="accent">]</span></span>
+          </h1>
+          <p class="hero-subtitle-role">· Designer Gráfico · Desenvolvedor Front-End <br>· Gestor de Tráfego Pago</p>
+          <p class="hero-subtitle">Transformo ideias em experiências visuais e resultados reais.</p>
+          <div class="hero-btns">
+            <a href="#portfolio" class="btn btn-primary">
+              <i class="ph ph-folder-open"></i> Ver Portfólio
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="ph ph-chat-circle-dots"></i> Fale Comigo
+            </a>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">30+</span>
-            <span class="stat-label">Clientes</span>
+          <div class="hero-socials">
+            <a href="https://www.instagram.com/salvianodsr/" target="_blank" aria-label="Instagram"><i
+                class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.linkedin.com/in/salviano-alves-de-gois-aa5793221/" target="_blank"
+              aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" target="_blank" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
+            <a href="https://github.com/Salvianodsr" target="_blank" aria-label="GitHub"><i
+                class="ph ph-github-logo"></i></a>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">Anos Exp.</span>
+        </div>
+        <div class="col-lg-6 hero-image reveal reveal-delay-1">
+          <div class="hero-image-frame mx-auto">
+            <img src="assets/img/salviano-hero.jpg" alt="Foto profissional" loading="eager">
+            <div class="hero-image-ring"></div>
+          </div>
+          <div class="hero-stats mx-auto mt-4">
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projetos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">30+</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Anos Exp.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -101,41 +115,43 @@
   <!-- ===================== ABOUT ===================== -->
   <section class="about" id="about">
     <div class="container about-container">
-      <div class="about-image reveal">
-        <div class="about-image-wrapper">
-          <img src="assets/img/about-photo.png" alt="Foto no ambiente de trabalho" loading="lazy">
-          <div class="about-image-accent"></div>
-        </div>
-      </div>
-      <div class="about-content reveal reveal-delay-1">
-        <p class="section-tag">SOBRE MIM</p>
-        <h2 class="section-title">Conheça quem está<br>por trás dos <span class="accent">projetos</span></h2>
-        <p class="about-text">
-          Sou <strong>Salviano Alves</strong>, profissional apaixonado por criação visual e tecnologia.
-          Trabalho com design gráfico, desenvolvimento front-end e gestão de tráfego pago,
-          entregando soluções completas do conceito à conversão.
-        </p>
-        <p class="about-text">
-          Minha missão é unir estética, funcionalidade e performance para criar experiências
-          digitais que realmente geram resultados para meus clientes.
-        </p>
-        <div class="about-contact-info">
-          <div class="contact-item">
-            <i class="ph ph-envelope-simple"></i>
-            <span>salvianodsr@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="ph ph-whatsapp-logo"></i>
-            <span>+55 86 <strong>99949-7096</strong></span>
-          </div>
-          <div class="contact-item">
-            <i class="ph ph-map-pin"></i>
-            <span>Teresina, Piauí – Brasil</span>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 about-image reveal">
+          <div class="about-image-wrapper mx-auto">
+            <img src="assets/img/about-photo.png" alt="Foto no ambiente de trabalho" loading="lazy">
+            <div class="about-image-accent"></div>
           </div>
         </div>
-        <a href="#contact" class="btn btn-primary">
-          <i class="ph ph-paper-plane-tilt"></i> Entre em Contato
-        </a>
+        <div class="col-lg-6 about-content reveal reveal-delay-1">
+          <p class="section-tag">SOBRE MIM</p>
+          <h2 class="section-title">Conheça quem está<br>por trás dos <span class="accent">projetos</span></h2>
+          <p class="about-text">
+            Sou <strong>Salviano Alves</strong>, profissional apaixonado por criação visual e tecnologia.
+            Trabalho com design gráfico, desenvolvimento front-end e gestão de tráfego pago,
+            entregando soluções completas do conceito à conversão.
+          </p>
+          <p class="about-text">
+            Minha missão é unir estética, funcionalidade e performance para criar experiências
+            digitais que realmente geram resultados para meus clientes.
+          </p>
+          <div class="about-contact-info">
+            <div class="contact-item">
+              <i class="ph ph-envelope-simple"></i>
+              <span>salvianodsr@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph ph-whatsapp-logo"></i>
+              <span>+55 86 <strong>99949-7096</strong></span>
+            </div>
+            <div class="contact-item">
+              <i class="ph ph-map-pin"></i>
+              <span>Teresina, Piauí – Brasil</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <i class="ph ph-paper-plane-tilt"></i> Entre em Contato
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -147,56 +163,63 @@
         <p class="section-tag">ESPECIALIDADES</p>
         <h2 class="section-title">Soluções completas para<br>sua <span class="accent">presença digital</span></h2>
       </div>
-      <div class="specialties-grid">
+      <div class="row g-4 justify-content-center">
         <!-- Card 1 -->
-        <div class="specialty-card reveal">
-          <div class="specialty-icon">
-            <i class="ph ph-paint-brush"></i>
+        <div class="col-md-6 col-lg-4">
+          <div class="specialty-card reveal h-100">
+            <div class="specialty-icon">
+              <i class="ph ph-paint-brush"></i>
+            </div>
+            <h3>Designer Gráfico</h3>
+            <p>Criação de identidades visuais, logotipos, materiais impressos e digitais, redes sociais, publicitário e
+              branding completo.</p>
+            <div class="specialty-tags">
+              <span>Branding</span>
+              <span>Social Media</span>
+              <span>Print</span>
+            </div>
+            <a href="#portfolio" class="card-link">
+              Ver projetos <i class="ph ph-arrow-right"></i>
+            </a>
           </div>
-          <h3>Designer Gráfico</h3>
-          <p>Criação de identidades visuais, logotipos, materiais impressos e digitais, redes sociais, publicitário e
-            branding completo.</p>
-          <div class="specialty-tags">
-            <span>Branding</span>
-            <span>Social Media</span>
-            <span>Print</span>
-          </div>
-          <a href="#portfolio" class="card-link">
-            Ver projetos <i class="ph ph-arrow-right"></i>
-          </a>
         </div>
         <!-- Card 2 -->
-        <div class="specialty-card reveal reveal-delay-1">
-          <div class="specialty-icon">
-            <i class="ph ph-code"></i>
+        <div class="col-md-6 col-lg-4">
+          <div class="specialty-card reveal reveal-delay-1 h-100">
+            <div class="specialty-icon">
+              <i class="ph ph-code"></i>
+            </div>
+            <h3>Desenvolvedor Front-End</h3>
+            <p>Desenvolvimento de sites e landing pages responsivas com HTML, CSS, JavaScript, React e foco em
+              performance
+              e UX.</p>
+            <div class="specialty-tags">
+              <span>Websites</span>
+              <span>Landing Pages</span>
+              <span>React</span>
+            </div>
+            <a href="#portfolio" class="card-link">
+              Ver projetos <i class="ph ph-arrow-right"></i>
+            </a>
           </div>
-          <h3>Desenvolvedor Front-End</h3>
-          <p>Desenvolvimento de sites e landing pages responsivas com HTML, CSS, JavaScript, React e foco em performance
-            e UX.</p>
-          <div class="specialty-tags">
-            <span>Websites</span>
-            <span>Landing Pages</span>
-            <span>React</span>
-          </div>
-          <a href="#portfolio" class="card-link">
-            Ver projetos <i class="ph ph-arrow-right"></i>
-          </a>
         </div>
         <!-- Card 3 -->
-        <div class="specialty-card reveal reveal-delay-2">
-          <div class="specialty-icon">
-            <i class="ph ph-chart-line-up"></i>
+        <div class="col-md-6 col-lg-4">
+          <div class="specialty-card reveal reveal-delay-2 h-100">
+            <div class="specialty-icon">
+              <i class="ph ph-chart-line-up"></i>
+            </div>
+            <h3>Gestor de Tráfego Pago</h3>
+            <p>Gestão de campanhas no Google Ads e Meta Ads com foco em ROI, geração de leads e conversão.</p>
+            <div class="specialty-tags">
+              <span>Google Ads</span>
+              <span>Meta Ads</span>
+              <span>Analytics</span>
+            </div>
+            <a href="#portfolio" class="card-link">
+              Ver projetos <i class="ph ph-arrow-right"></i>
+            </a>
           </div>
-          <h3>Gestor de Tráfego Pago</h3>
-          <p>Gestão de campanhas no Google Ads e Meta Ads com foco em ROI, geração de leads e conversão.</p>
-          <div class="specialty-tags">
-            <span>Google Ads</span>
-            <span>Meta Ads</span>
-            <span>Analytics</span>
-          </div>
-          <a href="#portfolio" class="card-link">
-            Ver projetos <i class="ph ph-arrow-right"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -212,126 +235,160 @@
       <div class="tools-categories">
         <!-- Design -->
         <div class="tool-category reveal">
-          <h4 class="tool-category-title"><i class="ph ph-palette"></i> Design</h4>
-          <div class="tools-grid">
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-                alt="Photoshop" loading="lazy" style="filter: brightness(0) invert(1);">
-              <span>Photoshop</span>
+          <h4 class="tool-category-title text-accent-teal"><i class="ph ph-palette"></i> Design</h4>
+          <div class="row g-3 justify-content-center">
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                  alt="Photoshop" loading="lazy" style="filter: brightness(0) invert(1);">
+                <span>Photoshop</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
-                alt="Illustrator" loading="lazy" style="filter: brightness(0) invert(1);">
-              <span>Illustrator</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"
+                  alt="Illustrator" loading="lazy" style="filter: brightness(0) invert(1);">
+                <span>Illustrator</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/indesign/indesign-plain.svg" alt="InDesign"
-                loading="lazy" style="filter: brightness(0) invert(1);">
-              <span>InDesign</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="assets/icons/indesign.svg" alt="InDesign" loading="lazy">
+                <span>InDesign</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
-                loading="lazy">
-              <span>Figma</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"
+                  loading="lazy" style="filter: brightness(0) invert(1);">
+                <span>Figma</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg"
-                alt="After Effects" loading="lazy" style="filter: brightness(0) invert(1);">
-              <span>After Effects</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-plain.svg"
+                  alt="After Effects" loading="lazy" style="filter: brightness(0) invert(1);">
+                <span>After Effects</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg"
-                alt="Premiere Pro" loading="lazy" style="filter: brightness(0) invert(1);">
-              <span>Premiere Pro</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-plain.svg"
+                  alt="Premiere Pro" loading="lazy" style="filter: brightness(0) invert(1);">
+                <span>Premiere Pro</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <svg viewBox="0 0 24 24" fill="white" width="40" height="40" aria-hidden="true"
-                style="margin-bottom: 8px;">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v10h-2V7zm2 4h-2V7h2v4z" />
-                <path
-                  d="M16 11V9c0-1.1-.9-2-2-2h-3v2h3v2h-3v2h3c1.1 0 2-.9 2-2zM8 11v2c0 1.1.9 2 2 2h3v-2h-3v-2h3v-2h-3c-1.1 0-2 .9-2 2z" />
-              </svg>
-              <span>CapCut</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="assets/icons/capcut.svg" alt="CapCut" loading="lazy">
+                <span>CapCut</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Dev -->
         <div class="tool-category reveal reveal-delay-1">
-          <h4 class="tool-category-title"><i class="ph ph-terminal-window"></i> Desenvolvimento</h4>
-          <div class="tools-grid">
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
-                loading="lazy">
-              <span>HTML5</span>
+          <h4 class="tool-category-title text-accent-teal"><i class="ph ph-terminal-window"></i> Desenvolvimento</h4>
+          <div class="row g-3 justify-content-center">
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                  loading="lazy">
+                <span>HTML5</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
-                loading="lazy">
-              <span>CSS3</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                  loading="lazy">
+                <span>CSS3</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="JavaScript" loading="lazy">
-              <span>JavaScript</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript" loading="lazy">
+                <span>JavaScript</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-                loading="lazy">
-              <span>React</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                  loading="lazy">
+                <span>React</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                alt="Tailwind" loading="lazy">
-              <span>Tailwind</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                  alt="Tailwind" loading="lazy">
+                <span>Tailwind</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
-                loading="lazy">
-              <span>Git</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                  loading="lazy">
+                <span>Git</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
-                loading="lazy" style="filter: invert(1);">
-              <span>GitHub</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+                  loading="lazy" style="filter: invert(1);">
+                <span>GitHub</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
-                loading="lazy">
-              <span>VS Code</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
+                  loading="lazy">
+                <span>VS Code</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- Traffic -->
         <div class="tool-category reveal reveal-delay-2">
-          <h4 class="tool-category-title"><i class="ph ph-megaphone"></i> Tráfego Pago</h4>
-          <div class="tools-grid">
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google Ads"
-                loading="lazy">
-              <span>Google Ads</span>
+          <h4 class="tool-category-title text-accent-teal"><i class="ph ph-trend-up"></i> Tráfego Pago</h4>
+          <div class="row g-3 justify-content-center">
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                  alt="Google Ads" loading="lazy">
+                <span>Google Ads</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <div class="tool-icon-fallback" style="color: #E4405F"><i class="ph ph-instagram-logo"></i></div>
-              <span>Instagram</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <div class="tool-icon-fallback" style="color: #E4405F"><i class="ph ph-instagram-logo"></i></div>
+                <span>Instagram</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
-                alt="Meta Ads" loading="lazy">
-              <span>Meta Ads</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+                  alt="Meta Ads" loading="lazy">
+                <span>Meta Ads</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <div class="tool-icon-fallback" style="color: #E37400"><i class="ph ph-chart-line"></i></div>
-              <span>Analytics</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <div class="tool-icon-fallback" style="color: #E37400"><i class="ph ph-chart-line"></i></div>
+                <span>Analytics</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <div class="tool-icon-fallback" style="color: #246FDB"><i class="ph ph-tag"></i></div>
-              <span>Tag Manager</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <div class="tool-icon-fallback" style="color: #246FDB"><i class="ph ph-tag"></i></div>
+                <span>Tag Manager</span>
+              </div>
             </div>
-            <div class="tool-item">
-              <div class="tool-icon-fallback" style="color: #1877F2"><i class="ph ph-crosshair"></i></div>
-              <span>Pixel Meta</span>
+            <div class="col-4 col-sm-3 col-md-2 col-lg-auto">
+              <div class="tool-item h-100">
+                <div class="tool-icon-fallback" style="color: #1877F2"><i class="ph ph-crosshair"></i></div>
+                <span>Pixel Meta</span>
+              </div>
             </div>
           </div>
         </div>
@@ -352,95 +409,97 @@
         <button class="filter-btn" data-filter="dev">Desenvolvimento</button>
         <button class="filter-btn" data-filter="trafego">Tráfego</button>
       </div>
-      <div class="portfolio-grid">
+      <div class="row g-4 justify-content-center portfolio-grid-container">
         <!-- Project 1 -->
-        <div class="portfolio-card reveal" data-category="design">
-          <div class="portfolio-card-image">
-            <img src="assets/img/project-branding.png" alt="Identidade Visual - Marca XYZ" loading="lazy">
-            <div class="portfolio-card-overlay">
-              <a href="#" class="btn btn-sm">Ver Projeto</a>
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="design">
+          <div class="portfolio-card reveal h-100">
+            <div class="portfolio-card-image">
+              <img src="assets/img/project-branding.png" alt="Identidade Visual - Marca XYZ" loading="lazy">
+              <div class="portfolio-card-overlay">
+                <a href="https://www.instagram.com/cevcpcvestibulares/" class="btn btn-sm">Ver Projeto</a>
+              </div>
             </div>
-          </div>
-          <div class="portfolio-card-info">
-            <span class="portfolio-category">Design</span>
-            <h4>Identidade Visual — Marca XYZ</h4>
+            <div class="portfolio-card-info">
+              <span class="portfolio-category">Design</span>
+              <h4>Identidade Visual — CEV+CPC Vestibulares</h4>
+            </div>
           </div>
         </div>
         <!-- Project 2 -->
-        <div class="portfolio-card reveal reveal-delay-1" data-category="dev">
-          <div class="portfolio-card-image">
-            <img src="assets/img/project-website.png" alt="Landing Page - Startup Tech" loading="lazy">
-            <div class="portfolio-card-overlay">
-              <a href="#" class="btn btn-sm">Ver Projeto</a>
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="dev">
+          <div class="portfolio-card reveal reveal-delay-1 h-100">
+            <div class="portfolio-card-image">
+              <img src="assets/img/project-website.png" alt="Landing Page - Startup Tech" loading="lazy">
+              <div class="portfolio-card-overlay">
+                <a href="https://www.instagram.com/dr.ursinhopediatria/" class="btn btn-sm">Ver Projeto</a>
+              </div>
             </div>
-          </div>
-          <div class="portfolio-card-info">
-            <span class="portfolio-category">Desenvolvimento</span>
-            <h4>Landing Page — Startup Tech</h4>
+            <div class="portfolio-card-info">
+              <span class="portfolio-category">Desenvolvimento</span>
+              <h4>Site Institucional — Clínica Dr Ursinho</h4>
+            </div>
           </div>
         </div>
         <!-- Project 3 -->
-        <div class="portfolio-card reveal reveal-delay-2" data-category="design">
-          <div class="portfolio-card-image placeholder-social">
-            <div class="placeholder-content">
-              <i class="ph ph-image-square"></i>
-              <span>Social Media</span>
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="design">
+          <div class="portfolio-card reveal reveal-delay-2 h-100">
+            <div class="portfolio-card-image">
+              <img src="assets/img/project-socialmedia.png" alt="Social Media — Aurevo Hub" loading="lazy">
+              <div class="portfolio-card-overlay">
+                <a href="https://www.instagram.com/aurevo_hub/" class="btn btn-sm">Ver Projeto</a>
+              </div>
             </div>
-            <div class="portfolio-card-overlay">
-              <a href="#" class="btn btn-sm">Ver Projeto</a>
+            <div class="portfolio-card-info">
+              <span class="portfolio-category">Design</span>
+              <h4>Social Media — Aurevo Hub</h4>
             </div>
-          </div>
-          <div class="portfolio-card-info">
-            <span class="portfolio-category">Design</span>
-            <h4>Social Media — Restaurante Gourmet</h4>
           </div>
         </div>
         <!-- Project 4 -->
-        <div class="portfolio-card reveal" data-category="trafego">
-          <div class="portfolio-card-image placeholder-campaign">
-            <div class="placeholder-content">
-              <i class="ph ph-chart-bar"></i>
-              <span>Campanha Ads</span>
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="trafego">
+          <div class="portfolio-card reveal h-100">
+            <div class="portfolio-card-image">
+              <img src="assets/img/project-googleads.png" alt="Campanha Google Ads — Facetec" loading="lazy">
+              <div class="portfolio-card-overlay">
+                <a href="https://www.instagram.com/accounts/login/?next=%2Ffac.facetec%2F&source=omni_redirect"
+                  class="btn btn-sm">Ver Projeto</a>
+              </div>
             </div>
-            <div class="portfolio-card-overlay">
-              <a href="#" class="btn btn-sm">Ver Projeto</a>
+            <div class="portfolio-card-info">
+              <span class="portfolio-category">Tráfego</span>
+              <h4>Campanha Google Ads — Facetec</h4>
             </div>
-          </div>
-          <div class="portfolio-card-info">
-            <span class="portfolio-category">Tráfego</span>
-            <h4>Campanha Google Ads — E-commerce</h4>
           </div>
         </div>
         <!-- Project 5 -->
-        <div class="portfolio-card reveal reveal-delay-1" data-category="dev">
-          <div class="portfolio-card-image placeholder-site">
-            <div class="placeholder-content">
-              <i class="ph ph-browser"></i>
-              <span>Website</span>
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="dev">
+          <div class="portfolio-card reveal reveal-delay-1 h-100">
+            <div class="portfolio-card-image">
+              <img src="assets/img/project-website02.png" alt="Site Institucional — Clínica Dr Luciano Cortez"
+                loading="lazy">
+              <div class="portfolio-card-overlay">
+                <a href="#" class="btn btn-sm">Ver Projeto</a>
+              </div>
             </div>
-            <div class="portfolio-card-overlay">
-              <a href="#" class="btn btn-sm">Ver Projeto</a>
+            <div class="portfolio-card-info">
+              <span class="portfolio-category">Desenvolvimento</span>
+              <h4>Site Institucional — Clínica Dr Luciano Cortez</h4>
             </div>
-          </div>
-          <div class="portfolio-card-info">
-            <span class="portfolio-category">Desenvolvimento</span>
-            <h4>Site Institucional — Escritório de Advocacia</h4>
           </div>
         </div>
         <!-- Project 6 -->
-        <div class="portfolio-card reveal reveal-delay-2" data-category="trafego">
-          <div class="portfolio-card-image placeholder-leads">
-            <div class="placeholder-content">
-              <i class="ph ph-users-three"></i>
-              <span>Geração de Leads</span>
+        <div class="col-md-6 col-lg-4 portfolio-item-wrapper" data-category="trafego">
+          <div class="portfolio-card reveal reveal-delay-2 h-100">
+            <div class="portfolio-card-image">
+              <img src="assets/img/project-metaads.png" alt="Meta Ads — Clínica de Estética" loading="lazy">
+              <div class="portfolio-card-overlay">
+                <a href="#" class="btn btn-sm">Ver Projeto</a>
+              </div>
             </div>
-            <div class="portfolio-card-overlay">
-              <a href="#" class="btn btn-sm">Ver Projeto</a>
+            <div class="portfolio-card-info">
+              <span class="portfolio-category">Tráfego</span>
+              <h4>Meta Ads — Clínica de Estética</h4>
             </div>
-          </div>
-          <div class="portfolio-card-info">
-            <span class="portfolio-category">Tráfego</span>
-            <h4>Meta Ads — Clínica de Estética</h4>
           </div>
         </div>
       </div>
@@ -455,12 +514,13 @@
         <h2 class="section-title">Clientes que já<br><span class="accent">atendi</span></h2>
       </div>
       <div class="clients-strip reveal">
-        <div class="client-logo">[Cliente 1]</div>
-        <div class="client-logo">[Cliente 2]</div>
-        <div class="client-logo">[Cliente 3]</div>
-        <div class="client-logo">[Cliente 4]</div>
-        <div class="client-logo">[Cliente 5]</div>
-        <div class="client-logo">[Cliente 6]</div>
+        <div class="client-logo"><img src="assets/img/Logo CEVCPCVestibulares.png" alt="CEV CPC Vestibulares"
+            height="100"></div>
+        <div class="client-logo"><img src="assets/img/Logo GrupoCEV.png" alt="Grupo CEV" height="100"></div>
+        <div class="client-logo"><img src="assets/img/Logos Dr Ursinho.png" alt="Dr Ursinho" height="100"></div>
+        <div class="client-logo"><img src="assets/img/Logo Facetec.png" alt="Facetec" height="100"></div>
+        <div class="client-logo"><img src="assets/img/Logo Luciano Cortez.png" alt="Dr Luciano Cortez" height="100">
+        </div>
       </div>
     </div>
   </section>
@@ -472,123 +532,139 @@
         <p class="section-tag">DEPOIMENTOS</p>
         <h2 class="section-title">O que meus clientes<br><span class="accent">dizem</span></h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal">
-          <div class="testimonial-stars">
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-          </div>
-          <p class="testimonial-text">"Profissional excepcional! Entregou a identidade visual da minha marca com
-            qualidade e pontualidade. Superou todas as expectativas."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <i class="ph ph-user-circle"></i>
+      <div class="row g-4 justify-content-center">
+        <!-- Testimonial 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card reveal h-100">
+            <div class="testimonial-stars">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
             </div>
-            <div>
-              <strong>Clemilson Martins</strong>
-              <span>CEV+CPC Vestibulares</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-1">
-          <div class="testimonial-stars">
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-          </div>
-          <p class="testimonial-text">"O site ficou incrível! Responsivo, rápido e com um design moderno. As conversões
-            aumentaram 40% no primeiro mês após o lançamento."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <i class="ph ph-user-circle"></i>
-            </div>
-            <div>
-              <strong>Romeu Alves</strong>
-              <span>Clínica Dr Ursinho</span>
+            <p class="testimonial-text">"Profissional excepcional! Entregou a identidade visual da minha marca com
+              qualidade e pontualidade. Superou todas as expectativas."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <i class="ph ph-user-circle"></i>
+              </div>
+              <div>
+                <strong>Clemilson Martins</strong>
+                <span>CEV+CPC Vestibulares</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal reveal-delay-2">
-          <div class="testimonial-stars">
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-            <i class="ph-fill ph-star"></i>
-          </div>
-          <p class="testimonial-text">"Triplicamos nossos leads com a gestão de tráfego pago. Estratégia certeira,
-            relatórios claros e um ROI impressionante."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <i class="ph ph-user-circle"></i>
+        <!-- Testimonial 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card reveal reveal-delay-1 h-100">
+            <div class="testimonial-stars">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
             </div>
-            <div>
-              <strong>Jefferson Paz</strong>
-              <span>Facetec</span>
+            <p class="testimonial-text">"O site ficou incrível! Responsivo, rápido e com um design moderno. As
+              conversões
+              aumentaram 40% no primeiro mês após o lançamento."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <i class="ph ph-user-circle"></i>
+              </div>
+              <div>
+                <strong>Romeu Alves</strong>
+                <span>Clínica Dr Ursinho</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card reveal reveal-delay-2 h-100">
+            <div class="testimonial-stars">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <p class="testimonial-text">"Triplicamos nossos leads com a gestão de tráfego pago. Estratégia certeira,
+              relatórios claros e um ROI impressionante."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">
+                <i class="ph ph-user-circle"></i>
+              </div>
+              <div>
+                <strong>Jefferson Paz</strong>
+                <span>Facetec</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- ===================== CONTACT ===================== -->
   <section class="contact" id="contact">
     <div class="container contact-container">
-      <div class="contact-info reveal">
-        <p class="section-tag">CONTATO</p>
-        <h2 class="section-title">Vamos trabalhar<br><span class="accent">juntos?</span></h2>
-        <p class="contact-desc">Tem um projeto em mente? Entre em contato e vamos transformar sua ideia em realidade.
-        </p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="ph ph-envelope-simple"></i>
-            <span>salvianodsr@gmail.com</span>
+      <div class="row gy-5">
+        <div class="col-lg-6 contact-info reveal">
+          <p class="section-tag">CONTATO</p>
+          <h2 class="section-title">Vamos trabalhar<br><span class="accent">juntos?</span></h2>
+          <p class="contact-desc">Tem um projeto em mente? Entre em contato e vamos transformar sua ideia em realidade.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="ph ph-envelope-simple"></i>
+              <span>salvianodsr@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph ph-whatsapp-logo"></i>
+              <span>+55 86 99949-7096</span>
+            </div>
+            <div class="contact-item">
+              <i class="ph ph-map-pin"></i>
+              <span>Teresina, Piauí – Brasil</span>
+            </div>
           </div>
-          <div class="contact-item">
-            <i class="ph ph-whatsapp-logo"></i>
-            <span>+55 86 99949-7096</span>
-          </div>
-          <div class="contact-item">
-            <i class="ph ph-map-pin"></i>
-            <span>Teresina, Piauí – Brasil</span>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/salvianodsr/" target="_blank" aria-label="Instagram"><i
+                class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.linkedin.com/in/salviano-alves-de-gois-aa5793221/" target="_blank"
+              aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" target="_blank" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
+            <a href="https://github.com/Salvianodsr" target="_blank" aria-label="GitHub"><i
+                class="ph ph-github-logo"></i></a>
           </div>
         </div>
-        <div class="contact-socials">
-          <a href="#" target="_blank" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
-          <a href="#" target="_blank" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-          <a href="#" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        <div class="col-lg-6">
+          <form class="contact-form reveal reveal-delay-1 h-100" id="contactForm"
+            action="https://formsubmit.co/ajax/salvianodsr@gmail.com" method="POST">
+            <!-- FormSubmit Configurations -->
+            <input type="hidden" name="_subject" value="Novo contato do Portfólio!">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" placeholder="Descreva seu projeto..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="ph ph-paper-plane-tilt"></i> Enviar Mensagem
+            </button>
+          </form>
         </div>
       </div>
-      <form class="contact-form reveal reveal-delay-1" id="contactForm"
-        action="https://formsubmit.co/ajax/salvianodsr@gmail.com" method="POST">
-        <!-- FormSubmit Configurations -->
-        <input type="hidden" name="_subject" value="Novo contato do Portfólio!">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-
-        <div class="form-group">
-          <label for="name">Nome</label>
-          <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Mensagem</label>
-          <textarea id="message" name="message" rows="5" placeholder="Descreva seu projeto..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">
-          <i class="ph ph-paper-plane-tilt"></i> Enviar Mensagem
-        </button>
-      </form>
     </div>
   </section>
 
@@ -600,10 +676,13 @@
       </a>
       <p class="footer-copy">&copy; 2026 @salvianodsr. Todos os direitos reservados.</p>
       <div class="footer-socials">
-        <a href="#" target="_blank" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-        <a href="#" target="_blank" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://www.instagram.com/salvianodsr/" target="_blank" aria-label="Instagram"><i
+            class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.linkedin.com/in/salviano-alves-de-gois-aa5793221/" target="_blank" aria-label="LinkedIn"><i
+            class="ph ph-linkedin-logo"></i></a>
         <a href="#" target="_blank" aria-label="Behance"><i class="ph ph-behance-logo"></i></a>
-        <a href="#" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a href="https://github.com/Salvianodsr" target="_blank" aria-label="GitHub"><i
+            class="ph ph-github-logo"></i></a>
       </div>
     </div>
   </footer>
@@ -613,6 +692,10 @@
     <i class="ph-fill ph-whatsapp-logo"></i>
   </a>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 
