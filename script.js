@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ---- Contact Form (basic handler) ----
+  // ---- Contact Form (AJAX handler) ----
   const contactForm = document.getElementById('contactForm');
 
   contactForm.addEventListener('submit', (e) => {
@@ -185,9 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
           if (data.message && data.message.includes("Activation")) {
             btn.innerHTML = '<i class="ph ph-envelope-simple"></i> Ative seu e-mail!';
             btn.style.background = '#f39c12';
-            alert("FormSubmit enviou um e-mail de ativação para salvianodsr@gmail.com. Por favor, confirme-o para começar a receber as mensagens.");
+            alert("O formulário precisa de uma ativação final. Verifique seu e-mail (salvianodsr@gmail.com) e clique no link de confirmação.");
           } else {
-            throw new Error(data.message || "Erro ao enviar");
+            throw new Error(data.message || "Erro no servidor");
           }
         }
       })
@@ -203,41 +203,43 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.disabled = false;
         }, 4000);
       });
-
-    // ---- Stat Counter Animation ----
-    const statNumbers = document.querySelectorAll('.stat-number');
-
-    const animateCounter = (el) => {
-      const target = parseInt(el.textContent);
-      const suffix = el.textContent.replace(/[0-9]/g, '');
-      let current = 0;
-      const increment = Math.ceil(target / 40);
-      const duration = 1500;
-      const stepTime = duration / (target / increment);
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        el.textContent = current + suffix;
-      }, stepTime);
-    };
-
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const statItems = entry.target.querySelectorAll('.stat-number');
-          statItems.forEach(stat => animateCounter(stat));
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    const statsContainer = document.querySelector('.hero-stats');
-    if (statsContainer) {
-      statsObserver.observe(statsContainer);
-    }
-
   });
+
+
+  // ---- Stat Counter Animation ----
+  const statNumbers = document.querySelectorAll('.stat-number');
+
+  const animateCounter = (el) => {
+    const target = parseInt(el.textContent);
+    const suffix = el.textContent.replace(/[0-9]/g, '');
+    let current = 0;
+    const increment = Math.ceil(target / 40);
+    const duration = 1500;
+    const stepTime = duration / (target / increment);
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = current + suffix;
+    }, stepTime);
+  };
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statItems = entry.target.querySelectorAll('.stat-number');
+        statItems.forEach(stat => animateCounter(stat));
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const statsContainer = document.querySelector('.hero-stats');
+  if (statsContainer) {
+    statsObserver.observe(statsContainer);
+  }
+
+});
