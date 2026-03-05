@@ -203,10 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.disabled = false;
         }, 4000);
       });
-    */
-
-    // -- Rest of code --
-
 
     // ---- Stat Counter Animation ----
     const statNumbers = document.querySelectorAll('.stat-number');
