@@ -135,74 +135,75 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Contact Form (basic handler) ----
   const contactForm = document.getElementById('contactForm');
 
-/*
-contactForm.addEventListener('submit', (e) => {
-  // Desativando temporariamente para forçar a ativação no GitHub Pages
-  // e.preventDefault(); 
-  return;
-
-  // Change button state to loading
-  btn.innerHTML = '<i class="ph ph-spinner-gap animate-spin"></i> Enviando...';
-  btn.disabled = true;
-
-  // FormSubmit strictly prohibits submissions from the 'file://' protocol
-  if (window.location.protocol === 'file:') {
-    btn.innerHTML = originalHtml;
-    btn.style.background = '';
-    btn.disabled = false;
-
-    alert(
-      "Teste Local Detectado!\n\n" +
-      "O FormSubmit não permite o envio de mensagens a partir de arquivos abertos diretamente no navegador (file://).\n\n" +
-      "Para testar agora, você precisa abrir seu projeto através de um servidor local (ex: Extensão 'Live Server' do VS Code) ou publicar o site na internet (GitHub Pages, Vercel, etc).\n\n" +
-      "O seu código já está 100% configurado e funcionará automaticamente assim que o site estiver online!"
-    );
+  /*
+  contactForm.addEventListener('submit', (e) => {
+    // Desativando temporariamente para forçar a ativação no GitHub Pages
+    // e.preventDefault(); 
     return;
-  }
-
-  // Use FormData to get all form values including hidden inputs
-  const formData = new FormData(contactForm);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-
-  fetch(contactForm.action, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: json
-  })
-    .then(async (response) => {
-      const data = await response.json();
-      if (response.status === 200 && data.success !== "false") {
-        // Success feedback
-        btn.innerHTML = '<i class="ph ph-check-circle"></i> Mensagem Enviada!';
-        btn.style.background = '#00cc6a';
-        contactForm.reset();
-      } else {
-        // If success is false, it might be pending activation
-        if (data.message && data.message.includes("Activation")) {
-          btn.innerHTML = '<i class="ph ph-envelope-simple"></i> Ative seu e-mail!';
-          btn.style.background = '#f39c12';
-          alert("FormSubmit enviou um e-mail de ativação para salvianodsr@gmail.com. Por favor, confirme-o para começar a receber as mensagens.");
+  
+    // Change button state to loading
+    btn.innerHTML = '<i class="ph ph-spinner-gap animate-spin"></i> Enviando...';
+    btn.disabled = true;
+  
+    // FormSubmit strictly prohibits submissions from the 'file://' protocol
+    if (window.location.protocol === 'file:') {
+      btn.innerHTML = originalHtml;
+      btn.style.background = '';
+      btn.disabled = false;
+  
+      alert(
+        "Teste Local Detectado!\n\n" +
+        "O FormSubmit não permite o envio de mensagens a partir de arquivos abertos diretamente no navegador (file://).\n\n" +
+        "Para testar agora, você precisa abrir seu projeto através de um servidor local (ex: Extensão 'Live Server' do VS Code) ou publicar o site na internet (GitHub Pages, Vercel, etc).\n\n" +
+        "O seu código já está 100% configurado e funcionará automaticamente assim que o site estiver online!"
+      );
+      return;
+    }
+  
+    // Use FormData to get all form values including hidden inputs
+    const formData = new FormData(contactForm);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+  
+    fetch(contactForm.action, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: json
+    })
+      .then(async (response) => {
+        const data = await response.json();
+        if (response.status === 200 && data.success !== "false") {
+          // Success feedback
+          btn.innerHTML = '<i class="ph ph-check-circle"></i> Mensagem Enviada!';
+          btn.style.background = '#00cc6a';
+          contactForm.reset();
         } else {
-          throw new Error(data.message || "Erro ao enviar");
+          // If success is false, it might be pending activation
+          if (data.message && data.message.includes("Activation")) {
+            btn.innerHTML = '<i class="ph ph-envelope-simple"></i> Ative seu e-mail!';
+            btn.style.background = '#f39c12';
+            alert("FormSubmit enviou um e-mail de ativação para salvianodsr@gmail.com. Por favor, confirme-o para começar a receber as mensagens.");
+          } else {
+            throw new Error(data.message || "Erro ao enviar");
+          }
         }
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      btn.innerHTML = '<i class="ph ph-warning-circle"></i> Erro no envio';
-      btn.style.background = '#ff4d4d';
-    })
-    .finally(() => {
-      setTimeout(() => {
-        btn.innerHTML = originalHtml;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 4000);
-    });
+      })
+      .catch((error) => {
+        console.error(error);
+        btn.innerHTML = '<i class="ph ph-warning-circle"></i> Erro no envio';
+        btn.style.background = '#ff4d4d';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      });
+    */
 });
 
 
